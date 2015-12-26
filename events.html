@@ -1,0 +1,139 @@
+
+<html lang="en" style="height:100%;" >
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+      <title>Eweek 2016</title>
+      <!-- CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <!-- Script for nav -->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script> 
+         $(function(){
+           $("#navig").load("nav.html"); 
+           $("#footerig").load("footer.html"); 
+         });
+         $(document).ready(function(){
+           $('.parallax').parallax();
+         
+           $('select').material_select();
+         });
+      </script> 
+   </head>
+
+   <body style="height:100%;">
+
+      <div id="navig"></div>
+      <main>
+      <div class="container" style="position:relative; top:30%;">
+         <h2 class="header text-darken-3 lighten-3 center" style=" margin:0px;">Events</h2>
+         <p class="grey-text text-darken-3 lighten-3 center" >Events go here</p>
+      </div>
+      <div id="results"></div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+      <script>
+
+      
+function Event(name, location, description, date, image) { //book model
+  this.name = name;
+  this.location = location;
+  this.description = description;
+  this.date = date;
+  this.image = image;
+}
+
+var timeline = new Array(10);
+$.ajax({
+    type: 'GET',
+    dataType: "json",
+    url: 'http://cors.io/?u=https://eweek2016.herokuapp.com/api/events',
+    success: function(data) {
+      //$('#results').html('');
+
+      for(var i=0; i<timeline.length; i++)
+      {
+        timeline[i] = new Event(
+          
+          data[i].name, 
+          data[i].location,
+          data[i].description,
+          data[i].date,
+          data[i].image);
+        //console.log(data[i].name);
+        console.log(timeline[i].name);
+         
+        
+        $('#results').append(     "<br><br>Name: " + timeline[i].name 
+                                    + "<br>Location: " + timeline[i].location
+                                    + "<br>description: " + timeline[i].description
+                                     + "<br>date: " + timeline[i].date
+                                    + "<br>" + timeline[i].image
+                                    );   
+      }
+      
+    }
+
+  });
+  
+</script>
+
+      </script>
+
+      <div class="container" style="position:relative; top:30%;">
+         <img id ="vert"src="img/vert.png">
+         <div class="row">
+            <div class="col s12 m5">
+               <div class="card-panel blue z-depth-1">
+                  
+                  
+                  <div class="row">
+                    <div class= "col s12">
+                      <h3 class="white-text center">Ebowla</h3>
+                    </div>
+                   <div class="col s12 white-text center">
+                    <p>11/11 at 11-12 Infinity Hall</p>
+                  </div>
+                     <div class="col s12 m12 l6">
+                        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                        </span>
+                     </div>
+                     <div class="col s12 m12 l6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.465770884048!2d-82.34609848822012!3d29.648255735428194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e8a39d48b3eff5%3A0xfcc65c9720c00762!2s432+Newell+Dr%2C+Gainesville%2C+FL+32603!5e0!3m2!1sen!2sus!4v1446993507864" width="100%"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                     </div>
+                  </div>
+                  </span>
+               </div>
+            </div>
+            <div class="col s12 m2">
+               <img id ="left"src="img/hori_left.png">
+            </div>
+            <div class="col s12 m5">
+               <p> </p>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col s12 m5">
+               <p> </p>
+            </div>
+            <div class="col s12 m2">
+               <img id ="right"src="img/hori_right.png">
+            </div>
+            <div class="col s12 m5">
+               <div class="card-panel teal">
+                  <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                  </span>
+               </div>
+            </div>
+         </div>
+       </div>
+      </main>
+       <div id="footerig"></div>
+      <!--  Scripts-->
+      <script src="js/bin/materialize.js"></script>
+   </body>
+</html>

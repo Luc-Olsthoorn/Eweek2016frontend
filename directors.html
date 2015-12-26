@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%;">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Eweek 2016</title> 
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- Script for nav -->
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script> 
+      $(function(){
+        $("#navig").load("nav.html"); 
+      });
+      $(document).ready(function(){
+        $('.parallax').parallax();
+       
+        $('select').material_select();
+      });
+    </script> 
+    
+  </head>
+  <body style="height:100%;"> 
+    <div id="navig"></div>
+
+    <div style="top:25%; position:relative;">
+      <h2 class="header text-darken-3 lighten-3 center" style="margin:0px;">Directors</h2>
+     
+    </div>
+    <div class="container " style="top:30%; position:relative;">
+      <div class="row">
+        <div class="col s12 m4 center">     
+            <img class="materialboxed z-depth-3 directorimg" src="img/directors/1.jpg">
+            <h4>Name</h4>
+            <h6>I am a director</h6>
+        </div>
+        <div class="col s12 m4 center">
+            <img class="materialboxed z-depth-3 directorimg" src="img/directors/1.jpg">
+            <h4>Name</h4>
+            <h6>I am a director</h6>
+        </div>
+        <div class="col s12 m4 center">
+            <img class="materialboxed z-depth-3 directorimg" src="img/directors/1.jpg">
+            <h4>Name</h4>
+            <h6>I am a director</h6>
+      </div>
+      <div class="row">
+        <div class="col s12 m4 center">     
+            <img class="materialboxed z-depth-3 directorimg" src="img/directors/1.jpg">
+            <h4>Name</h4>
+            <h6>I am a director</h6>
+        </div>
+        <div class="col s12 m4 center">
+            <img class="materialboxed z-depth-3 directorimg" src="img/directors/1.jpg">
+            <h4>Name</h4>
+            <h6>I am a director</h6>
+        </div>
+        <div class="col s12 m4 center">
+            <img class="materialboxed z-depth-3 directorimg" src="img/directors/1.jpg">
+            <h4>Name</h4>
+            <h6>I am a director</h6>
+      </div>
+      </div>
+    </div>
+    <!--  Scripts-->
+    <script src="js/bin/materialize.js"></script>
+  </body>
+</html>

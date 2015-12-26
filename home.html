@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%; background: url(img/landingpage2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Eweek 2016</title> 
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <!-- Script for nav -->
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script> 
+      $(function(){
+        $("#navig").load("nav.html"); 
+        $("#footerig").load("footer.html"); 
+      });
+      $(document).ready(function(){
+        $('.parallax').parallax();
+       
+        $('select').material_select();
+      });
+    </script> 
+  </head>
+  <body style="height:100%;"> 
+    <div id="navig"></div>
+    
+    <main>
+      <h1 class="white-text center" style ="font-family: 'Lobster', cursive;">E-Week 2016</h1>
+      <div class="container center" style="max-width:666px;">
+       
+    <link rel="stylesheet" href="flipclock/compiled/flipclock.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="flipclock/compiled/flipclock.js"></script>  
+  </head>
+  <body>
+    <div class="clock" style="margin:2em;"></div>
+    
+    <script type="text/javascript">
+      var clock;
+
+      $(document).ready(function() {
+
+        // Grab the current date
+        var currentDate = new Date();
+
+        // Set some date in the future. In this case, it's always Jan 1
+        var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 47);
+
+        // Calculate the difference in seconds between the future and current date
+        var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+        // Instantiate a coutdown FlipClock
+        clock = $('.clock').FlipClock(diff, {
+          clockFace: 'DailyCounter',
+          countdown: true
+        });
+      });
+    </script>
+    
+
+      </div>
+      
+    </main>
+ 
+    <div id="footerig"></div>
+    <!--  Scripts-->
+    <script src="js/bin/materialize.js"></script>
+  </body>
+</html>

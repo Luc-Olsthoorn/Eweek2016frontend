@@ -1,0 +1,38 @@
+<script>
+function Event(name, location, description, date, image) { //book model
+  this.name = name;
+  this.location = location;
+  this.description = description;
+  this.date = date;
+  this.image = image;
+}
+var timeline;
+
+$.ajax({
+    type: 'GET',
+    dataType: "json",
+    url: 'http://cors.io/?u=https://eweek2016.herokuapp.com/api/events'
+    success: function(data) {
+      $('#results').html('');
+      for(var i=0; i<timeline.length; i++)
+      {
+        timeline[i] = new Event(
+          
+          data.items[i].volumeInfo.name, 
+          data.items[i].volumeInfo.location,
+          data.items[i].volumeInfo.description,
+          data.items[i].volumeInfo.date,
+          data.items[i].volumeInfo.image);
+         
+        
+        $('#results').append(     "<br><br>Name: " + timeline[i].name 
+                                    + "<br>Location: " + timeline[i].location
+                                    + "<br>description: " + timeline[i].description
+                                     + "<br>date: " + timeline[i].date
+                                    + "<br><img src='" + timeline[i].image + "'/>"
+                                    );   
+      }
+    }
+
+  });
+</script>

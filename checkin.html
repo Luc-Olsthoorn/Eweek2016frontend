@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%;" >
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+      <title>Eweek 2016</title>
+      <!-- CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <!-- Script for nav -->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/bin/materialize.js"></script>
+      <script> 
+         $(function(){
+           $("#navig").load("nav.html"); 
+           $("#footerig").load("footer.html"); 
+         });
+         $(document).ready(function(){
+           $('.parallax').parallax();
+         
+           $('select').material_select();
+         });
+      </script> 
+   </head>
+   <body style="height:100%;">
+      <div id="navig"></div>
+      <main>
+      <div class="container" >
+        <img id ="vert"src="img/vert.png">
+         <div class="row">
+            <div class="col s12 m6">
+               <form class="col s12">
+                  <div class="row center">
+                     <h3 class="center">Sign-in</h3>
+                     <div class="input-field col s12">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">UFl email</label>
+                     </div>
+                     <div class="input-field col s12">
+                        <input id="last_name" type="number" class="validate">
+                        <label for="last_name">Event Code</label>
+                     </div>
+                     <button class="btn waves-effect waves-light blue" type="submit" value="Subscribe" name="subscribe" name="action">Login
+                     <i class="material-icons right">send</i>
+                     </button>
+                  </div>
+               </form>
+            </div>
+            <div class="col s12 m6">
+               <form class="col s12">
+                  <div class="row center">
+                     <h3 class="center">Signup</h3>
+                     <div class="input-field col s12">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">First name</label>
+                     </div>
+                     <div class="input-field col s12">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last name</label>
+                     </div>
+                     <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">UFl Email</label>
+                     </div>
+                     <div class="input-field col s12">
+                        <select>
+                           <option value="Default">Choose your student organization:</option>
+                           <option value="Other">Other</option>
+                           <option value="AeroGators">AeroGators</option>
+                           <option value="A&amp;WMA">A&amp;WMA</option>
+                           <option value="AABE">AABE</option>
+                           <option value="AIAA">AIAA</option>
+                           <option value="AIChE">AIChE</option>
+                           <option value="ANS">ANS</option>
+                           <option value="ASEE">ASEE</option>
+                           <option value="ASABE">ASABE</option>
+                           <option value="ASME">ASME</option>
+                           <option value="AWRA">AWRA</option>
+                           <option value="AWWA">AWWA</option>
+                           <option value="ACE">ACE</option>
+                           <option value="ACSE">ACSE</option>
+                           <option value="AES">AES</option>
+                           <option value="BME GSC">BME GSC</option>
+                           <option value="BMES">BMES</option>
+                           <option value="COPRI">COPRI</option>
+                           <option value="EA">EA</option>
+                           <option value="EWH">EWH</option>
+                           <option value="EWB">EWB</option>
+                           <option value="FES">FES</option>
+                           <option value="FSEA">FSEA</option>
+                           <option value="FWEA">FWEA</option>
+                           <option value="FLEG">FLEG</option>
+                           <option value="GR">GR</option>
+                           <option value="HOPES">HOPES</option>
+                           <option value="IEEE">IEEE</option>
+                           <option value="IIE">IIE</option>
+                           <option value="INFORMS">INFORMS</option>
+                           <option value="ITE">ITE</option>
+                           <option value="NSBE">NSBE</option>
+                           <option value="oSTEM">oSTEM</option>
+                           <option value="PSR">PSR</option>
+                           <option value="PTS">PTS</option>
+                           <option value="SSDC">SSDC</option>
+                           <option value="SFB">SFB</option>
+                           <option value="SASE">SASE</option>
+                           <option value="SAE (GMS)">SAE (GMS)</option>
+                           <option value="SEE">SEE</option>
+                           <option value="SHMPS">SHMPS</option>
+                           <option value="SHPE">SHPE</option>
+                           <option value="SSE">SSE</option>
+                           <option value="SWE">SWE</option>
+                           <option value="Solar Gators">Solar Gators</option>
+                           <option value="TBP">TBP</option>
+                           <option value="Theta Tau">Theta Tau</option>
+                           <option value="WECE">WECE</option>
+                        </select>
+                        <label>Organization</label> 
+                     </div>
+                     <button class="btn waves-effect blue waves-light" type="submit" value="Subscribe" name="subscribe" name="action">Signup
+                     <i class="material-icons right">send</i>
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+
+      </div>
+       </main>
+      <div id="footerig"></div>
+      <!--  Scripts-->
+   </body>
+</html>
